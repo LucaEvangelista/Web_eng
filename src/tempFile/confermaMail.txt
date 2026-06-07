@@ -1,0 +1,28 @@
+[ 2026-06-07T00:14:20.892482 ]  dom@mail.com:
+--------------------------------- SoccorsoWeb ----------------------------------
+Gentile dom,
+per poter procedere alla risoluzione della sua richiesta clicchi qui: 
+http://localhost:8080/soccorso_Web/con?uuid=dab5ab40-baac-4086-b49b-34472e349dbd
+grazie.
+--------------------------------- SoccorsoWeb ----------------------------------
+
+
+
+
+
+
+
+[ 2026-06-07T00:31:14.060139 ]  dom@mail.com:
+--------------------------------- SoccorsoWeb ----------------------------------
+Gentile dom,
+per poter procedere alla risoluzione della sua richiesta clicchi qui: 
+http://localhost:8080/soccorso_Web/con?uuid=f423b73c-5f09-4aa2-b936-3b10ec11cd04
+grazie.
+--------------------------------- SoccorsoWeb ----------------------------------
+
+
+
+
+
+
+
