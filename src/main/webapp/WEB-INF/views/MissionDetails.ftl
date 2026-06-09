@@ -165,7 +165,13 @@
 
                                                 <tr>
                                                     <td>${c.contenuto!"-"}</td>
-                                                    <td>${c.createdAt!"-"}</td>
+                                                    <td>        
+                                                    	<#if c.createdAt??>
+   														 	${c.createdAt?datetime("yyyy-MM-dd'T'HH:mm:ss")?string("dd/MM/yyyy HH:mm")}
+														<#else>
+      													  	-
+        												</#if>
+												</td>
                                                 </tr>
 
                                             </#list>

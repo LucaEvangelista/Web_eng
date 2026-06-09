@@ -110,6 +110,32 @@ public class MissioneDao implements IDaoRead<Missione>, IDaoWrite<Missione>{
 			throw new RuntimeException("JDBC error", e);
 		}
 	}
+	
+	public ArrayList<Missione> findAttive() {
+		ArrayList<Missione> list = new ArrayList<Missione>();
+		try {
+			Connection con = ConnectionFactory.getConnection();
+			String query = "SELECT * FROM missioni WHERE fase = 'attiva'";
+			PreparedStatement ps = con.prepareStatement(query);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Missione m = new Missione();
+				m.setObiettivo(rs.getString("obiettivo"));
+				m.setPosizione(rs.getString("posizione"));
+				m.setRichiestaRif(rs.getInt("richiestaRIF"));
+				m.setSquadraRif(rs.getInt("squadraRIF"));
+				m.setMissioneId(rs.getInt("missioneID"));
+				m.setStatus(rs.getString("fase"));
+				
+				list.add(m);
+			}
+			return list;
+			
+		} catch (SQLException e) {
+			throw new RuntimeException("JDBC error", e);
+		}
+	}
 
 	@Override
 	public Missione findById(int id) {
@@ -416,6 +442,7 @@ public class MissioneDao implements IDaoRead<Missione>, IDaoWrite<Missione>{
 			throw new RuntimeException("JDBC error", e);
 		}
 	}
+	
 	
 	
 

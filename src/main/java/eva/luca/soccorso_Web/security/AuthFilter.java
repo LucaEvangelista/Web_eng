@@ -13,8 +13,8 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-
-@WebFilter(urlPatterns = {"/opt", "/sqd", "/mss", "/ogm", "/rqs"})
+//pubblica solo la creazione della richiesta di soccorso
+@WebFilter(urlPatterns = {"/opt", "/sqd", "/mss", "/ogm", "/rqs", "/dshb"})
 public class AuthFilter extends HttpFilter implements Filter {
        
 
@@ -30,11 +30,6 @@ public class AuthFilter extends HttpFilter implements Filter {
 			action = "";
 		}
 		
-		//pubblica solo la creazione della richiesta di soccorso
-		if("/prqs".equals(servletPath)) {
-			chain.doFilter(httpRequest, httpResponse);
-			return;
-		}
 		
 		//controllo sessione esistente
 		HttpSession session = SecurityLayer.checkSession(httpRequest);
