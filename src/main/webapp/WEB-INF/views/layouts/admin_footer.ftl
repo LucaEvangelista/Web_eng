@@ -41,20 +41,27 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-<script src="${contextPath}/vendor/jquery/jquery.min.js"></script>
-<script src="${contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="${contextPath}/vendor/jquery/jquery.min.js"></script>
+	<script src="${contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-<script src="${contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script src="${contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-<script src="${contextPath}/js/sb-admin-2.min.js"></script>
+	<script src="${contextPath}/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-<script src="${contextPath}/vendor/chart.js/Chart.min.js"></script>
+	<script src="${contextPath}/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-<script src="${contextPath}/js/demo/chart-area-demo.js"></script>
+	<script src="${contextPath}/js/demo/chart-area-demo.js"></script>
+	
+	<script src="${contextPath}/vendor/datatables/jquery.dataTables.min.js"></script>
+	<script src="${contextPath}/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+	<script src="${contextPath}/js/my-script.js"></script>
+	
+	
 
 </body>
 

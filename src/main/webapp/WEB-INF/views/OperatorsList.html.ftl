@@ -39,6 +39,18 @@
                 <div class="card-body">
 
                     <#if opt?? && opt?size gt 0>
+                    
+                            <div class="row mb-3">
+            					<div class="col-md-4">
+                					<label for="statusFilter" class="form-label">Filtra per stato</label>
+
+                					<select id="statusFilter" class="form-control">
+                    		 			<option value="">Tutti</option>
+                    		 			<option value="libero">Libero</option>
+                   			 			<option value="occupato">Occupato</option>
+                					</select>
+           				 		</div>
+        					</div>
 
                         <div class="table-responsive">
 

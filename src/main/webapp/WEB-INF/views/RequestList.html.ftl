@@ -39,6 +39,20 @@
                 <div class="card-body">
 
                     <#if rqs?? && rqs?size gt 0>
+                    
+	                    <div class="row mb-3">
+	    					<div class="col-md-4">
+			        			<label for="faseFilter" class="form-label">Filtra per fase</label>
+			
+			        			<select id="faseFilter" class="form-control">
+			           				<option value="">Tutte</option>
+			            			<option value="attiva">Attiva</option>
+			            			<option value="in esecuzione">In esecuzione</option>
+			            			<option value="terminata">Terminata</option>
+			            			<option value="rifiutata">Rifiutata</option>
+			        			</select>
+			    			</div>
+						</div>
 
                         <div class="table-responsive">
 

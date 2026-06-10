@@ -29,7 +29,7 @@
                     Return to list
                 </a>
                 
-                <#if mission?? && mission.status?? && mission.status == "attiva">
+                <#if mission?? && mission.status?? && mission.status == "attiva" && ruolo == "admin">
 			
 			        <form action="${contextPath}/mss"
 			              method="post"

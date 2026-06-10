@@ -26,3 +26,18 @@ grazie.
 
 
 
+[ 2026-06-10T18:02:12.896824 ]  mariomario@mail.com:
+--------------------------------- SoccorsoWeb ----------------------------------
+richiesta: 0
+Gentile mario rossi,
+per poter procedere alla risoluzione della sua richiesta clicchi qui: 
+http://localhost:8080/soccorso_Web/con?uuid=421608d4-0076-492f-86ca-56f005b1cc5a
+grazie.
+--------------------------------- SoccorsoWeb ----------------------------------
+
+
+
+
+
+
+

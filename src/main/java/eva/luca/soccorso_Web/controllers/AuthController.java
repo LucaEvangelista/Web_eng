@@ -112,7 +112,7 @@ public class AuthController extends HttpServlet {
 				user.getEmail(), user.getRuolo());
 		
 		if("admin".equals(user.getRuolo())) {
-			response.sendRedirect(request.getContextPath() + "/rqs?action=list");
+			response.sendRedirect(request.getContextPath() + "/dshb?action=home");
 
 		} else {
 			response.sendRedirect(request.getContextPath() + "/opt?action=details&id=" + user.getId());
