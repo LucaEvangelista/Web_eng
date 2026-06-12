@@ -23,13 +23,14 @@
                 <h1 class="h3 mb-0 text-gray-800">
                     Dettagli missione
                 </h1>
+            <#if ruolo??  && ruolo == "admin">
 
                 <a href="${contextPath}/mss?action=list"
                    class="btn btn-primary btn-sm shadow-sm">
                     Return to list
                 </a>
                 
-                <#if mission?? && mission.status?? && mission.status == "attiva" && ruolo == "admin">
+                <#if mission?? && mission.status?? && mission.status == "attiva">
 			
 			        <form action="${contextPath}/mss"
 			              method="post"
@@ -59,6 +60,8 @@
 			        </form>
 			
 			    </#if>
+		    </#if>
+			    
 
             </div>
 

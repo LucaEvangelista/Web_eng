@@ -66,11 +66,16 @@ public class AuthFilter extends HttpFilter implements Filter {
 	protected boolean isOperatorAllowed(String servletPath, String action) {
 		
 		if("/opt".equals(servletPath)) {
-			return "details".equals(action);
+			return "details".equals(action)
+		            || "addPatenti".equals(action)
+		            || "removePatente".equals(action)
+		            || "addCompetenze".equals(action)
+		            || "removeCompetenza".equals(action);
 		}
 		
 		if("/mss".equals(servletPath)) {
-			return "details".equals(action);
+			return "details".equals(action) 
+					|| "addComunicazione".equals(action);
 		}
 		
 		return false;

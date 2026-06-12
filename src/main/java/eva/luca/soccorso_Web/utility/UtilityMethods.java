@@ -19,8 +19,6 @@ public class UtilityMethods {
             writer.newLine();
             writer.write("--------------------------------- SoccorsoWeb ----------------------------------");
             writer.newLine();
-            writer.write("richiesta: " + richiesta.getId());
-            writer.newLine();
             writer.write("Gentile " + richiesta.getNomePersona() + ",");
             writer.newLine();
             writer.write(emailText);

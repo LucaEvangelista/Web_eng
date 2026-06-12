@@ -23,11 +23,13 @@
                 <h1 class="h3 mb-0 text-gray-800">
                     Dettagli operatore
                 </h1>
-
-                <a href="${contextPath}/opt?action=list"
-                   class="btn btn-primary btn-sm shadow-sm">
-                    Return to list
-                </a>
+                
+				<#if ruolo?? && ruolo == "admin">
+	                <a href="${contextPath}/opt?action=list"
+	                   class="btn btn-primary btn-sm shadow-sm">
+	                    Return to list
+	                </a>
+                </#if>
 
             </div>
 
@@ -67,7 +69,7 @@
                                 </p>
 
                                 <p>
-                                    <strong>Birthday:</strong> ${opt.age}
+                                    <strong>Birthday:</strong> ${opt.age?datetime("yyyy-MM-dd")?string("dd/MM/yyyy")}
                                 </p>
 
                             <#else>

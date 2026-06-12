@@ -41,3 +41,33 @@ grazie.
 
 
 
+[ 2026-06-10T22:46:29.954083 ]  loredi@mail.com:
+--------------------------------- SoccorsoWeb ----------------------------------
+richiesta: 0
+Gentile lorenzo di natale,
+per poter procedere alla risoluzione della sua richiesta clicchi qui: 
+http://localhost:8080/soccorso_Web/con?uuid=e63b3584-8c34-49d9-85c4-d9225fdd4825
+grazie.
+--------------------------------- SoccorsoWeb ----------------------------------
+
+
+
+
+
+
+
+[ 2026-06-12T14:48:25.705623 ]  malu@mail.com:
+--------------------------------- SoccorsoWeb ----------------------------------
+richiesta: 0
+Gentile mario luigi,
+per poter procedere alla risoluzione della sua richiesta clicchi qui: 
+http://localhost:8080/soccorso_Web/con?uuid=908e49ad-1f4e-40b7-a41f-d4387b46818f
+grazie.
+--------------------------------- SoccorsoWeb ----------------------------------
+
+
+
+
+
+
+

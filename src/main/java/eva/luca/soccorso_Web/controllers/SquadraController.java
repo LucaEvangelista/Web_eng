@@ -99,13 +99,6 @@ public class SquadraController extends HttpServlet {
 		
 		renderTemplate(request, response, "SquadDetails.ftl", dataMap);
 		
-//		request.setAttribute("sqds", sq);
-//		request.setAttribute("leadApp", serviceAp.finCapoBySquadID(id));
-//		request.setAttribute("opApp", serviceAp.finOperatorBySquadID(id));
-//		request.setAttribute("opNS", serviceAp.findOperatoriSenzaSquadra());
-//		
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/views/SquadDetails.jsp");
-//		dispatcher.forward(request, response);
 	}
 
 	protected void squadList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -116,10 +109,7 @@ public class SquadraController extends HttpServlet {
 		dataMap.put("sqds", serviceS.findAll());
 		
 		renderTemplate(request, response, "SquadList.ftl", dataMap);
-		
-//		request.setAttribute("sqds", serviceS.findAll());
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/views/SquadList.jsp");
-//		dispatcher.forward(request, response);
+
 	}
 	
 	protected void newSquad(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -129,8 +119,7 @@ public class SquadraController extends HttpServlet {
 		
 		renderTemplate(request, response, "NewSquad.ftl", dataMap);
 		
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/views/NewSquad.jsp");
-//		dispatcher.forward(request, response);
+
 	}
 	
 	protected void removeOperatorFromSquad (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

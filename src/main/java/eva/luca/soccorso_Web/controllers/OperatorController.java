@@ -305,19 +305,6 @@ public class OperatorController extends HttpServlet {
 			return;
 		}
 
-//		String nam = request.getParameter("operator-name");
-//		String sur = request.getParameter("operator-surname");
-//		String mail = request.getParameter("operator-email");
-//		String birthst = request.getParameter("operator-birthday");
-//		LocalDate birth = LocalDate.parse(birthst);
-//
-//		Operator optr = new Operator(nam, sur, mail, birth);
-//
-//		if (service.insert(optr)) {
-//			response.sendRedirect(request.getContextPath() + "/opt?action=list");
-//		} else {
-//			response.sendRedirect("Error.html");
-//		}
 	}
 
 }

@@ -68,8 +68,9 @@
                                         <th>Email</th>
                                         <th>Place</th>
                                         <th>Description</th>
-                                        <th>fase</th>
+                                        <th>Fase</th>
                                         <th>Ricezione</th>
+                                        <th>Inizio lavorazione</th>
                                         <th>Chiusura</th>
                                         <th class="text-center">Details</th>
                                     </tr>
@@ -86,8 +87,21 @@
                                             <td>${r.indirizzo!"-"}</td>
                                             <td>${r.descrizione!"-"}</td>
                                             <td>${r.fase!"-"}</td>
-                                            <td>${r.createdAt!"-"}</td>
-                                            <td>${r.closedAt!"-"}</td>
+                                            <td>${r.createdAt?datetime("yyyy-MM-dd'T'HH:mm")?string("dd/MM/yyyy HH:mm")!"-"}</td>
+                                            <td>
+                                            	<#if r.workingAt??>
+    												${r.workingAt?datetime("yyyy-MM-dd'T'HH:mm")?string("dd/MM/yyyy HH:mm")}
+												<#else>
+    												-
+												</#if>
+											</td>
+                                            <td>
+                                            	<#if r.closedAt??>
+    												${r.closedAt?datetime("yyyy-MM-dd'T'HH:mm")?string("dd/MM/yyyy HH:mm")}
+												<#else>
+    												-
+												</#if>
+											</td>
 
                                             <td class="text-center">
 
