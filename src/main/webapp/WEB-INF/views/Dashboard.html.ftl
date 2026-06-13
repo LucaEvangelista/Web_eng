@@ -19,11 +19,6 @@
                     Dashboard
                 </h1>
 
-                <a href="#"
-                   class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                    <i class="fas fa-download fa-sm text-white-50"></i>
-                    Generate Report
-                </a>
 
             </div>
 
@@ -188,7 +183,104 @@
 
             </div>
             <!-- Fine Content Row -->
+            
+            <hr class="my-4">
+            
+            <!-- Inizio Content Row -->
+			<div class="row">
+			<!-- ================= CARD LISTA RICHIESTE ================= -->
+			<div class="col-12">
+            <div class="card shadow mb-4">
 
+                <!-- Header card -->
+                <div class="card-header py-3">
+
+                    <h6 class="m-0 font-weight-bold text-primary">
+                        Richieste di soccorso in esecuzione
+                    </h6>
+
+                </div>
+
+                <!-- Body card -->
+                <div class="card-body">
+
+                    <#if inEsecuzione?? && inEsecuzione?size gt 0>
+                    
+
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered table-striped"
+                                   id="requestsExecutionTable"
+                                   width="100%"
+                                   cellspacing="0">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Place</th>
+                                        <th>Description</th>
+                                        <th>Fase</th>
+                                        <th>Ricezione</th>
+                                        <th>Inizio lavorazione</th>
+                                        <th class="text-center">Details</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <#list inEsecuzione as ie>
+
+                                        <tr>
+                                            <td>${ie.nomePersona!"-"}</td>
+                                            <td>${ie.mailPersona!"-"}</td>
+                                            <td>${ie.indirizzo!"-"}</td>
+                                            <td>${ie.descrizione!"-"}</td>
+                                            <td>${ie.fase!"-"}</td>
+                                            <td>${ie.createdAt?datetime("yyyy-MM-dd'T'HH:mm")?string("dd/MM/yyyy HH:mm")!"-"}</td>
+                                            <td>
+                                            	<#if ie.workingAt??>
+    												${ie.workingAt?datetime("yyyy-MM-dd'T'HH:mm")?string("dd/MM/yyyy HH:mm")}
+												<#else>
+    												-
+												</#if>
+											</td>
+
+
+                                            <td class="text-center">
+
+                                                <a href="${contextPath}/rqs?action=details&id=${ie.id}"
+                                                   class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+
+                                            </td>
+                                        </tr>
+
+                                    </#list>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    <#else>
+
+                        <p class="mb-0 text-center">
+                            Nessuna richiesta attualmente in esecuzione.
+                        </p>
+
+                    </#if>
+
+                </div>
+
+            </div>
+            </div>
+            <!-- =============== FINE CARD LISTA RICHIESTE =============== -->
+			</div>
 
         </div>
         <!-- /.container-fluid -->

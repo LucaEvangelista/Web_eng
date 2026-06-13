@@ -27,6 +27,7 @@ public class ComunicazioneDao implements IDaoWrite<Comunicazione>, IDaoRead<Comu
 				cm.setId(rs.getInt("comunicazioneID"));
 				cm.setMissioneRif(rs.getInt("missioneRIF"));
 				cm.setContenuto(rs.getString("contenuto"));
+				cm.setRuolo(rs.getString("ruolo"));
 				cm.setCreatedAt(rs.getTimestamp("created_at").toLocalDateTime());
 				
 				list.add(cm);
@@ -65,6 +66,7 @@ public class ComunicazioneDao implements IDaoWrite<Comunicazione>, IDaoRead<Comu
 				cm.setId(rs.getInt("comunicazioneID"));
 				cm.setMissioneRif(rs.getInt("missioneRIF"));
 				cm.setContenuto(rs.getString("contenuto"));
+				cm.setRuolo(rs.getString("ruolo"));
 				cm.setCreatedAt(rs.getTimestamp("created_at").toLocalDateTime());
 				
 				list.add(cm);
@@ -81,11 +83,12 @@ public class ComunicazioneDao implements IDaoWrite<Comunicazione>, IDaoRead<Comu
 	public boolean insert(Comunicazione c) {
 		try {
 			Connection con = ConnectionFactory.getConnection();
-			String query = "INSERT INTO comunicazioni(contenuto, missioneRIF) VALUES (?, ?)";
+			String query = "INSERT INTO comunicazioni(contenuto, missioneRIF, ruolo) VALUES (?, ?, ?)";
 			PreparedStatement ps = con.prepareStatement(query);
 			
 			ps.setString(1, c.getContenuto());
 			ps.setInt(2, c.getMissioneRif());
+			ps.setString(3, c.getRuolo());
 			
 			int affRows = ps.executeUpdate();
 			

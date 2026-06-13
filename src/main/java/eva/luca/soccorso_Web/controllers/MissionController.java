@@ -232,12 +232,16 @@ public class MissionController extends HttpServlet {
 		
 		int missionId = Integer.parseInt(request.getParameter("missionId"));
 		
+		HttpSession session = request.getSession(false);
+		String ruolo = (String) session.getAttribute("ruolo");
+		
 		String contenuto = request.getParameter("com-contenuto");
 		
 		Comunicazione com = new Comunicazione();
 		
 	    com.setMissioneRif(missionId);
 	    com.setContenuto(contenuto);
+	    com.setRuolo(ruolo);
 	    
 	    serviceC.insert(com);
 	    

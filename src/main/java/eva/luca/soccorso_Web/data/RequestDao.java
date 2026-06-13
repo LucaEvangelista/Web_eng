@@ -182,6 +182,43 @@ public class RequestDao implements IDaoRead<Request>, IDaoWrite<Request>{
 		return list;
 	}
 	
+	public ArrayList<Request> findAllInExecution() {
+		
+		ArrayList<Request> list = new ArrayList<Request>();
+		
+		try {
+			Connection con = ConnectionFactory.getConnection();
+			
+			String query = "SELECT * FROM richieste WHERE fase = ?";
+			
+			PreparedStatement ps =con.prepareStatement(query);
+			ps.setString(1, "in esecuzione");
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				Request rq = new Request();
+				rq.setNomePersona(rs.getString("nomePERS"));
+				rq.setMailPersona(rs.getString("mailPERS"));
+				rq.setDescrizione(rs.getString("descrizione"));
+				rq.setIndirizzo(rs.getString("indirizzo"));
+				rq.setId(rs.getInt("richiestaID"));
+				
+				rq.setCreatedAt(rs.getTimestamp("created_at").toLocalDateTime());
+				rq.setWorkingAt(getLocalDateTime(rs, "working_at"));
+				rq.setClosedAt(getLocalDateTime(rs, "closed_at"));
+				
+				rq.setFase(rs.getString("fase"));
+				rq.setUuid(rs.getString("codice_u"));
+				
+				list.add(rq);
+			}
+			
+		} catch (SQLException e) {
+			throw new RuntimeException("JDBC error", e);
+		}
+		return list;
+	}
+	
 	public ArrayList<Request> findAllNotPending() {
 		
 		ArrayList<Request> list = new ArrayList<Request>();

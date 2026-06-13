@@ -216,13 +216,14 @@ CREATE TABLE comunicazioni(
 	comunicazioneID BIGINT PRIMARY KEY AUTO_INCREMENT,
 	contenuto TEXT,
 	created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ruolo VARCHAR(255) NOT NULL,
 	missioneRIF BIGINT NOT NULL,
     FOREIGN KEY(missioneRIF) REFERENCES missioni (missioneID) ON DELETE CASCADE
 );
 
 
-INSERT INTO comunicazioni (contenuto, missioneRIF) VALUES 
-('test di comunicazione', '1');
+INSERT INTO comunicazioni (contenuto, missioneRIF, ruolo) VALUES 
+('test di comunicazione', '1', 'admin');
 
 
 

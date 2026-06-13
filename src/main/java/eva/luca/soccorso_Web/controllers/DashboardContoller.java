@@ -81,6 +81,7 @@ public class DashboardContoller extends HttpServlet {
 		ArrayList<Request> tutteR = serviceR.findAll();
 		ArrayList<Missione> tutteM = serviceM.findAll();
 		ArrayList<Missione> attive = serviceM.findAttive();
+		ArrayList<Request> inEsecuzione = serviceR.findAllInExecution();
 		
 		int missioniAttive = attive.size();
 		int missioniTotali = tutteM.size();
@@ -98,6 +99,7 @@ public class DashboardContoller extends HttpServlet {
 		dataMap.put("pending", pendenti);
 		dataMap.put("attive", attive);
 		dataMap.put("percentualeTerminate", percentualeTerminate);
+		dataMap.put("inEsecuzione", inEsecuzione);
 		
 		renderTemplate(request, response, "Dashboard.html.ftl", dataMap);
 	}

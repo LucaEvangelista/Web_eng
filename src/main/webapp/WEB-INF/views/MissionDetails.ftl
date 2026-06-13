@@ -156,6 +156,7 @@
                                     <thead>
                                         <tr>
                                             <th>Comunicazione</th>
+                                            <th>Ruolo</th>
                                             <th>Orario</th>
                                         </tr>
                                     </thead>
@@ -168,6 +169,7 @@
 
                                                 <tr>
                                                     <td>${c.contenuto!"-"}</td>
+                                                    <td>${c.ruolo!"-"}</td>
                                                     <td>        
                                                     	<#if c.createdAt??>
    														 	${c.createdAt?datetime("yyyy-MM-dd'T'HH:mm:ss")?string("dd/MM/yyyy HH:mm")}
@@ -183,7 +185,8 @@
 
                                             <tr>
                                                 <td>Nessuna comunicazione</td>
-                                                <td>Nessun orario</td>
+                                                <td> - </td>
+                                                <td> - </td>
                                             </tr>
 
                                         </#if>

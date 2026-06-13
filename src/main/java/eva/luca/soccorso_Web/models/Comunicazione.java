@@ -6,6 +6,7 @@ public class Comunicazione {
 	
 	private int id;
 	private String contenuto;
+	private String ruolo;
 	private LocalDateTime createdAt;
 	private int missioneRif;
 	
@@ -52,6 +53,14 @@ public class Comunicazione {
 
 	public void setMissioneRif(int missioneRif) {
 		this.missioneRif = missioneRif;
+	}
+	
+	public String getRuolo() {
+		return ruolo;
+	}
+
+	public void setRuolo(String ruolo) {
+		this.ruolo = ruolo;
 	}
 	
 	
